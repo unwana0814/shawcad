@@ -11,8 +11,8 @@ function Footer() {
                     <p className='text-base lg:text-lg font-medium mt-8 text-shawgreen'>Join our newsletter</p>
                     <p className='text-sm lg:text-base font-normal text-shawgreen my-2'>We'll send you a nice letter once per week. No spam.</p>
                 </div>
-                <div className='flex justify-center items-center gap-2'>
-                    <input type="text" placeholder='Enter your email' className='bg-white border border-shawgreen text-base lg:text-lg rounded-lg px-3 py-2' />
+                <div className='flex flex-col sm:flex-row justify-center sm:items-center items-start gap-2'>
+                    <input type="text" placeholder='Enter your email' className=' bg-white border border-shawgreen text-base lg:text-lg rounded-lg px-3 py-2 ' />
                     <Button variant="outlined" className="sm:mx-0 font-thin text-sm lg:text-base px-3 py-2 bg-shawgreen hover:font-semibold text-white">
                         Submit
                     </Button>
@@ -92,7 +92,7 @@ function Footer() {
 
         <hr className='bg-shawgreen my-5 md:my-10' />
 
-        <p className='text-center text-shawgreen pb-5 text-lg'>&copy; 2023 Chawcad. All RIghts Reserved.</p>
+        <p className='text-center text-shawgreen pb-5 text-sm lg:text-base'>&copy; 2023 Chawcad. All RIghts Reserved.</p>
         </div>
 
     </div>

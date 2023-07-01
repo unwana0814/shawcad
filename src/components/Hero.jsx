@@ -12,7 +12,7 @@ import myPhoto from '../images/myPhoto.jpg'
 function Hero() {
   return (
     <div className='font-pop'>
-        <div className='container mx-auto my-5 -z-10 font-pop'>
+        <div className='lg:mx-20 md:mx-10 mx-5 lg:my-10 my-5 -z-10 font-pop'>
            <div className="bg-green-50 rounded-3xl shadow-lg px-12 py-10 relative">
            <div className="sm:flex-row flex flex-col items-center justify-between md:gap-4 sm:gap-2 space-y-4">
               <div className="text-center sm:text-left">
@@ -72,7 +72,8 @@ function Hero() {
           </div>
             </div>
 
-            <img className='absolute lg:bottom-0 lg:right-[100px] md:bottom-10 md:left-[60%] sm:bottom-7 sm:left-[50%] bottom-10 left-[30%] z-30 md:w-[30%] sm:w-[40%] w-[50%]' src={lady} alt="" />
+            <img className='absolute lg:bottom-0 lg:right-10 md:bottom-10 md:right-12 sm:bottom-7 sm:right-0 bottom-10 right-16 z-30
+            w-1/2  md:w-1/3' src={lady} alt="" />
            </div>
 
            <div className="flex justify-center items-center my-5 gap-2">

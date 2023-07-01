@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from '../images/CHAWCAD.png';
 import { Button } from "@material-tailwind/react";
 import { Transition } from "@headlessui/react";
 import {ArrowLongRightIcon} from "@heroicons/react/24/outline";
@@ -8,14 +9,14 @@ function Nav() {
   return (
     <div>
       <nav className="font-pop">
-        <div className="container mx-auto my-5">
+        <div className="lg:mx-20 md:mx-10 mx-5 lg:my-10 my-5 ">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img
-                  className="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                  alt="Workflow"
+                  className="h-12 w-24"
+                  src={logo}
+                  alt="Chawcad Logo"
                 />
               </div>
               <div className="hidden md:block">
