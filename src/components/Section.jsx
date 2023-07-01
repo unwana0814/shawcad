@@ -295,7 +295,7 @@ function Section() {
             </div>
 
 </div>
-        <div class="flex-1 p-7 md:py-0">
+        <div className="flex-1 p-7 md:py-0">
             <h1 className='text-xl lg:text-2xl text-shawgreen text-medium'>Pay Anytime, Anywhere with Chawcad's Offline Payment Feature!</h1>
                 <p className='my-4 text-shawgreen font-normal text-base'>Chawcad's offline payment feature lets customers pay even without internet. Scan the QR code with the Chawcad app and store payment info locally offline. Payments will be securely transmitted once internet is restored. Enjoy hassle-free payment anytime, anywhere, even in areas with limited internet access.</p>
                 <Button variant="outlined" className="flex items-center gap-2 font-medium text-base lg:text-lg px-3 py-2 hover:font-semibold text-shawgreen ">
