@@ -11,3 +11,8 @@
 .inner-circle{
     @apply border-red-900 rounded-full h-[380px] w-[380px] z-10
 }
+
+.navigation-button {
+    @apply bg-blue-500 text-black px-4 py-2 rounded;
+    transition: left 0.5s ease-in-out;
+  }

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button } from '@material-tailwind/react';
 import { ChevronRightIcon, ChartBarIcon, QrCodeIcon, PlusCircleIcon, ShareIcon, EyeSlashIcon, UserIcon, BellAlertIcon, WifiIcon, Battery100Icon, ChatBubbleBottomCenterTextIcon, EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import myPhoto from "../images/myPhoto.jpg";
+import myPhoto from "../images/avatar.png";
 import Appstore from "../images/App Store.png";
 import Googlestore from "../images/Google Store.png";
+import photo from '../images/Rectangle 10.png';
 
 function Section() {
   return (
@@ -26,7 +27,7 @@ function Section() {
       <div className="flex justify-between items-center ">
         <div className="">
       <p className='text-xs font-semibold text-shawgreen'>Good Afternoon</p>
-      <h3 className='text- font-bold text-shawgreen'>Hello Unwana</h3>
+      <h3 className='text- font-bold text-shawgreen'>Hello John</h3>
     </div>
     <div className="flex justify-center items-center space-x-2">
       <BellAlertIcon className='w-6 h-6' />
@@ -104,7 +105,7 @@ function Section() {
     </div>
 
     {/* Second */}
-    <div className="lg:mx-10 flex flex-col-reverse sm:flex-row justify-between items-center">
+    <div className="lg:mx-20 flex flex-col-reverse sm:flex-row justify-between items-center">
     <div className="flex-1 p-7 md:py-0 ">
             <h1 className='text-xl lg:text-2xl text-shawgreen text-medium'>Splitting Bills Made Easy</h1>
                 <p className='my-4 text-shawgreen font-normal text-base'>Chawcad also allows customers to split the bill with ease, making it perfect for groups of friends or colleagues who want to share the cost of their meal. Each person can pay their share directly from their own phone, saving time and avoiding any awkwardness.</p>
@@ -131,7 +132,7 @@ function Section() {
       <div className="flex justify-between items-center ">
     <div className="">
       <p className='text-xs font-semibold text-shawgreen'>Good Afternoon</p>
-      <h3 className='text- font-bold text-shawgreen'>Hello Unwana</h3>
+      <h3 className='text- font-bold text-shawgreen'>Hello John</h3>
     </div>
     <div className="flex justify-center items-center space-x-2">
       <BellAlertIcon className='w-6 h-6' />
@@ -228,7 +229,7 @@ function Section() {
       <div className="flex justify-between items-center ">
     <div className="">
       <p className='text-xs font-semibold text-shawgreen'>Good Afternoon</p>
-      <h3 className='text- font-bold text-shawgreen'>Hello Unwana</h3>
+      <h3 className='text- font-bold text-shawgreen'>Hello John</h3>
     </div>
     <div className="flex justify-center items-center space-x-2">
       <BellAlertIcon className='w-6 h-6' />
@@ -313,11 +314,11 @@ function Section() {
         <div className="bg-green-50 rounded-3xl shadow-lg lg:px-12 px-6 py-10 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-4">
             <div>
-                <img src={myPhoto} alt="Profile Photo" className="w-56 h-56 rounded-full"/>
+                <img src={photo} alt="Profile Photo" className="w-56 h-56 rounded-full"/>
             </div>
             <div className='md:text-left text-center'>
                 <p className="text-shawgreen text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam hic iure ipsa facere harum incidunt, officiis obcaecati soluta, recusandae expedita aliquid! Cumque reiciendis eligendi illum eveniet nemo!</p>
-                <h2 className="text-lg font-medium my-4 text-shawgreen">Unwana Ekpo</h2>
+                <h2 className="text-lg font-medium my-4 text-shawgreen">John Doe</h2>
             </div>
         </div>
 
@@ -349,7 +350,7 @@ function Section() {
       <div className="flex justify-between items-center ">
     <div className="">
       <p className='text-xs font-semibold text-shawgreen'>Good Afternoon</p>
-      <h3 className='text- font-bold text-shawgreen'>Hello Unwana</h3>
+      <h3 className='text- font-bold text-shawgreen'>Hello John</h3>
     </div>
     <div className="flex justify-center items-center space-x-2">
       <BellAlertIcon className='w-6 h-6' />

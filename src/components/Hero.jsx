@@ -1,28 +1,64 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Button } from '@material-tailwind/react';
 import { ArrowLongRightIcon, CameraIcon, PaperClipIcon, WifiIcon, BellAlertIcon, Battery100Icon, ChartBarIcon, EyeSlashIcon, UserIcon, QrCodeIcon, PlusCircleIcon, ShareIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
-import lady from '../images/lady.png';
+import {motion} from 'framer-motion';
+import texts from './data';
+import img1 from '../images/lady.png';
+import img2 from '../images/img2.png';
+import img3 from '../images/img3.png';
 import catalog from '../images/Catalog.png';
 import circoole from '../images/Circooles.png';
 import layer from '../images/Layers.png';
 import quotient from '../images/Quotient.png';
 import sisyphus from '../images/Sisyphus.png';
-import myPhoto from '../images/myPhoto.jpg'
+import myPhoto from '../images/myPhoto.jpg';
+
+const images = [img1, img2, img3];
 
 function Hero() {
+
+  // const [buttonPosition, setButtonPosition] = useState(0);
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setButtonPosition(prevPosition => prevPosition + 1);
+  //   }, 5000);
+
+  //   return () => clearInterval(interval);
+  // }, []);
+
+  const delay = 5000;
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [imgSlide, imgCurrentSlide] = useState(0);
+
+
+  useEffect(() => {
+    const nextSlide = () => {
+      setCurrentSlide((prevSlide) => (prevSlide === texts.length - 1 ? 0 : prevSlide + 1));
+      imgCurrentSlide((prevSlide) => (prevSlide === images.length -1 ? 0 : prevSlide + 1));
+    };
+    const interval = setInterval(nextSlide, delay);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
+
     <div className='font-pop'>
         <div className='lg:mx-20 md:mx-10 mx-5 lg:my-10 my-5 -z-10 font-pop'>
            <div className="bg-green-50 rounded-3xl shadow-lg px-12 py-10 relative">
            <div className="sm:flex-row flex flex-col items-center justify-between md:gap-4 sm:gap-2 space-y-4">
-              <div className="text-center sm:text-left">
-                <h1 className='md:text-3xl lg:text-4xl text-2xl text-shawgreen font-medium'>Revolunize Your Dining <br/> Experience with <br/> Chawcad's Convenient <br/> Payment System!</h1>
-                <p className='py-4 text-sm text-shawgreen'>Pay for your mean instantly by scanning the QR code at your table with Chawcad. <br/>No cash or cards needed, no more waiting for the check or flagging down a server.</p>
+              <motion.div className="text-center sm:text-left" initial={{ opacity: 0, scale: 0.5 }}
+               animate={{ opacity: 1, scale: 1 }}
+               transition={{ duration: 0.5, delay: 0.25 }}>
+                <h1 className='md:text-3xl lg:text-4xl text-2xl text-shawgreen font-medium'>{texts[currentSlide].header} <br/> {texts[currentSlide].header_one} <br/> {texts[currentSlide].header_two} <br/> {texts[currentSlide].header_three}</h1>
+                <p className='py-4 text-sm text-shawgreen'>{texts[currentSlide].paragraph} <br/>{texts[currentSlide].paragraph2}</p>
                 <Button variant="outlined" className="flex items-center gap-2 mx-auto sm:mx-0 font-thin text-sm px-3 py-2 bg-shawgreen hover:font-semibold text-white hover:animate-pulse rounded-lg">
                 Open App
                 <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
             </Button>
-              </div>
+              </motion.div>
 
               <div className='relative z-40' > {/*For the absolute circle */}
               {/* For Desktop */}
@@ -72,10 +108,11 @@ function Hero() {
           </div>
             </div>
 
-            <img className='absolute lg:bottom-0 lg:right-10 md:bottom-10 md:right-12 sm:bottom-7 sm:right-0 bottom-10 right-16 z-30
-            w-1/2  md:w-1/3' src={lady} alt="" />
-           </div>
 
+            <img className='absolute lg:bottom-0 lg:right-10 md:bottom-10 md:right-12 sm:bottom-7 sm:right-0 bottom-10 right-16 z-30
+            w-1/2  md:w-1/3' src={img1} alt="" />
+           </div>
+{/* images[0][imgCurrentSlide] */}
            <div className="flex justify-center items-center my-5 gap-2">
               <div className='h-2 w-10 bg-shawgreen rounded-full'></div>
               <div className='h-2 w-2 bg-shawgreen bg-opacity-25 rounded-full'></div>
